@@ -10,7 +10,7 @@ export default async function Home({searchParams} : {
 }) {
     const query = (await searchParams).query;
     const params = { search: query || null}
-    //old way to call posts
+    //old way to call posts test
     // const posts = await client.fetch(STARTUPS_QUERY);
 
     const session = await auth();
