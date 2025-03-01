@@ -14,11 +14,10 @@ import StartupCard, { StartupTypeCard } from "@/app/components/StartupCard";
 export const experimental_ppr = true;
 const md = markdownit();
 
-export default async function Page({ params }: { params: Promise<{ id: string }> }) {
+export default async function Page({ params }: { params: Promise<{ id: string }>  }) {
   const id = (await params).id;
-
   // Fetch the post from Sanity (Server-Side)
-  const post: Startup | null = await client.fetch(STARTUP_BY_ID_QUERY, { id });
+  const post: any | null = await client.fetch(STARTUP_BY_ID_QUERY, { id });
   //const { select: editorPosts } = await client.fetch(PLAYLIST_BY_SLUG_QUERY, {slug: "editor-picks"});
 
 
