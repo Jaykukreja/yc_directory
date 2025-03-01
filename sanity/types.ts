@@ -151,6 +151,10 @@ export type Startup = {
   title?: string;
   slug?: Slug;
   author?: {
+    _id: any;
+    image: any;
+    name: ReactI18NextChildren | Iterable<ReactI18NextChildren>;
+    username: ReactI18NextChildren | Iterable<ReactI18NextChildren>;
     _ref: string;
     _type: "reference";
     _weak?: boolean;
